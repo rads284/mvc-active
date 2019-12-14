@@ -1,6 +1,7 @@
 #include <queue>
 using namespace std;
 
+#define MAX_SIZE 1000
 template <typename Message>
 class Message_Queue_Servant
 {
@@ -14,7 +15,8 @@ class Message_Queue_Servant
     Message get (void);
     private:
     // Internal Queue representation.
-    queue <Message>m_q;
+    queue<Message> m_q;
+
 };
 // Servant.c
 // implementation of the four operations
