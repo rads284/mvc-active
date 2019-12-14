@@ -5,5 +5,5 @@ class Message_Future
     // Type conversion, which blocks
     // waiting to obtain the result of the
     // asynchronous method invocation.
-    operator Message ();
+    operator Message();
 };

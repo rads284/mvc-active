@@ -2,11 +2,12 @@
 class Method_Request
 {
     public:
+    Method_Request();
+    ~Method_Request();
     // Evaluate the synchronization constraint.
     virtual bool guard (void) const = 0;
     // Implement the method.
     virtual void call (void) = 0;
-    
 };
 class Put : public Method_Request
     {

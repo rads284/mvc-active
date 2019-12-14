@@ -5,8 +5,9 @@ virtual void MQ_Scheduler::dispatch (void)
     // Iterate continuously in a
     // separate thread.
     for (;;) {
-        Activation_Queue::iterator i;
-        for (i = act_que_->begin ();i != act_que_->end ();i++) {
+        //i should be iterator of act_que_
+        act_que_ i;
+        for (i = act_que_->begin();i != act_que_->end ();i++) {
             // Select a Method Request ‘m’
             // whose guard evaluates to true.
             Method_Request *m = *i;
