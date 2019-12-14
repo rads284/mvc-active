@@ -8,6 +8,7 @@ class Method_Request
     virtual void call (void) = 0;
     
 };
+template <typename Message>
 class Put : public Method_Request
     {
         public:
@@ -25,6 +26,8 @@ class Put : public Method_Request
         Message_Queue_Servant *servant_;
         Message arg_;
     };
+    
+template <typename Message>
 class Get : public Method_Request
     {
         public:
