@@ -8,9 +8,7 @@ class MQ_Scheduler
     // Insert the Method Request into
     // the Activation_Queue. This method
     // runs in the thread of its caller.
-    void enqueue (Method_Request *method) {
-     act_que_->enqueue (method);
-    }
+    void enqueue (Method_Request *method);
     // Dispatch the Method Requests
     // on their Servant. This method
     // runs in a separate thread.

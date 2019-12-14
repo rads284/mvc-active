@@ -11,11 +11,14 @@ virtual void MQ_Scheduler::dispatch (void)
             // whose guard evaluates to true.
             Method_Request *m = *i;
             if (m->guard ()) {
-            // Remove <m> from the queue first
-            // in case <call> throws an exception.
-            act_que_->dequeue (m);
-            m->call ();
+                // Remove <m> from the queue first
+                // in case <call> throws an exception.
+                act_que_->dequeue (m);
+                m->call ();
             }
         }
     }
+}
+void MQ_Scheduler::enqueue (Method_Request *method) {
+     act_que_->enqueue (method);
 }

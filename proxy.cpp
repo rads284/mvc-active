@@ -1,6 +1,4 @@
-#include "method_request.h"
-#include "future.h"
-#include "servant.h"
+#include "proxy.h"
 
 class Message_Queue_Proxy
 {
