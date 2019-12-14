@@ -1,4 +1,4 @@
-#include<vector>
+#include <vector>
 
 template <typename Message>
 class Message_Queue_Servant
