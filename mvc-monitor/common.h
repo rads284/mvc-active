@@ -1,6 +1,6 @@
-// common.h
-// https://helloacm.com/model-view-controller-explained-in-c/
-#pragma once
+#ifndef COMMON_H
+#define COMMON_H
 #include <string>
 using namespace std;
 typedef void (*DataChangeHandler)(string newData);
+#endif

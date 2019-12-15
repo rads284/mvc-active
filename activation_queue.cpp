@@ -7,9 +7,9 @@ Activation_Queue::Activation_Queue(){
 //     delete active_queue_;
 // }
 void Activation_Queue::enqueue (Method_Request *method){
-    cout<<"Activation queue Enqueueing\n";
+    // cout<<"Activation queue Enqueueing\n";
     active_queue_.push_back(method);
-    cout<<"Size is: "<<active_queue_.size()<<endl;
+    cout<<"Size is: "<<active_queue_.size()<<"\n";
 }
 void Activation_Queue::dequeue (Method_Request *method){
     cout<<"Activation queue Dequeueing\n";
@@ -25,6 +25,5 @@ aq_iter Activation_Queue::begin(){
 }
 aq_iter Activation_Queue::end(){
     // cout<<"End:"<<this<<"\n";
-
     return active_queue_.end();
 }

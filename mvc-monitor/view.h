@@ -6,16 +6,10 @@
 // View is responsible to present data to users
 class View {
     public:
-        View(const Model &model) {
-            this->model = model;
-        }
-        View() {}
-        void SetModel(const Model &model) {
-            this->model = model;
-        }
-        void Render() {
-            std::cout << "Model Data = " << model.Data() << endl;
-        }
+        View(const Model &model);
+        View();
+        void SetModel(const Model &model);
+        void Render();
     private:
         Model model;
 };

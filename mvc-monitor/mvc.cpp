@@ -1,5 +1,4 @@
-// mvc.cpp
-// https://helloacm.com/model-view-controller-explained-in-c/
+
 #include <iostream>
 #include "view.h"
 #include "model.h"
@@ -21,5 +20,6 @@ int main() {
     // when application starts or button is clicked or form is shown...
     controller.OnLoad();
     model.SetData("Changes"); // this should trigger View to render
+    model.SetData("Changes");
     return 0;
 }
