@@ -15,7 +15,7 @@ void Activation_Queue::dequeue (Method_Request *method){
     cout<<"Activation queue Dequeueing\n";
     aq_iter iter = active_queue_.begin();
     while(iter!= active_queue_.end()){
-        cout<<(**iter == *method)<<"DEQUE \n";
+        // cout<<(**iter == *method)<<"DEQUE \n";
         (**iter == *method) ? iter = active_queue_.erase(iter) : ++iter;
     }
 }

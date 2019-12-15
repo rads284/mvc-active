@@ -1,6 +1,7 @@
 #include"message.h"
 #include "proxy.h"
 #include <thread>
+#include <string>
 int main(){
 
 	Message_Queue_Proxy *mqp =  new Message_Queue_Proxy(4);
@@ -9,10 +10,16 @@ int main(){
 	// Message *message2 = new Message("Hello2!",2);
 	// Message *message3 = new Message("Hello3!",3);
 	
-	// mqp->put(*message1);
-	Message result = mqp->get();
+	mqp->put(*message1);
+	mqp->put(*message1);
+	mqp->put(*message1);
+	mqp->put(*message1);
+	mqp->put(*message1);
+	Message_Future result = mqp->get();
 	
-	result.display();
+	Message message_result = (Message)result;
+
+	// message_result.display();
 	// while(true){}
 	// mqp->~Message_Queue_Proxy();
 	// thread t1(mqp.put(message));	

@@ -1,6 +1,6 @@
 #include "proxy.h"
 #include<iostream>
-Message_Queue_Proxy::Message_Queue_Proxy(int size = MAX_SIZE):servant_(new Message_Queue_Servant(size)),
+Message_Queue_Proxy::Message_Queue_Proxy(int size):servant_(new Message_Queue_Servant(size)),
 scheduler_(new MQ_Scheduler()),dispatcher_(&MQ_Scheduler::dispatch, scheduler_){
     cout<<"Message Queue Proxy Created\n";
     cout<<"Constructor"<<"\n";

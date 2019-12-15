@@ -8,6 +8,7 @@ class Message{
 	Message(string s, int i);
 	void display(void)const;
 	bool operator==(Message const&)const;
+	bool compare(string const&)const;
 	private:
 	string msg_;
 	int i_;
