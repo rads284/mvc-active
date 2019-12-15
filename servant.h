@@ -1,12 +1,14 @@
+#ifndef SERVANT_H
+#define SERVANT_H
+#include"message.h"
 #include <queue>
 using namespace std;
 
 #define MAX_SIZE 1000
-template <typename Message>
 class Message_Queue_Servant
 {
     public:
-    Message_Queue_Servant (size_t size);
+    Message_Queue_Servant (int size);
     // Predicates.
     bool empty (void) const;
     bool full (void) const;
@@ -16,8 +18,9 @@ class Message_Queue_Servant
     private:
     // Internal Queue representation.
     queue<Message> m_q;
-
+    int size_;
 };
 // Servant.c
 // implementation of the four operations
 // no synchronized
+#endif

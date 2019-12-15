@@ -1,7 +1,6 @@
 #include "future.h"
 
-template <typename Message>
-operator Message(){
-	future<Message> fut = async();
-	return fut.get();
+Message_Future::operator Message(){
+	// future<Message> put = async();
+	// return fut.get();
 }

@@ -1,9 +1,15 @@
+#ifndef SCHEDULER_H
+#define SCHEDULER_H
 #include"method_request.h"
 #include"activation_queue.h"
-
+#include<iostream>
+#include<deque>
+using namespace std;
 class MQ_Scheduler
 {
     public:
+    MQ_Scheduler();
+    ~MQ_Scheduler();
     // ... constructors/destructors, etc.,
     // Insert the Method Request into
     // the Activation_Queue. This method
@@ -13,7 +19,10 @@ class MQ_Scheduler
     // on their Servant. This method
     // runs in a separate thread.
     virtual void dispatch (void);
+    // void dequeue (Method_Request *method)
     protected:
     // Queue of pending Method_Requests.
     Activation_Queue *act_que_;
+    // deque <Method_Request*> active_queue_;
 };
+#endif
