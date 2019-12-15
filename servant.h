@@ -2,6 +2,7 @@
 #define SERVANT_H
 #include"message.h"
 #include <queue>
+#include <iostream>
 using namespace std;
 
 #define MAX_SIZE 1000
@@ -15,6 +16,7 @@ class Message_Queue_Servant
     // Queue operations.
     void put (const Message x);
     Message get (void);
+    // bool operator==(const rhs &) const;
     private:
     // Internal Queue representation.
     queue<Message> m_q;
