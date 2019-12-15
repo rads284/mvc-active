@@ -23,6 +23,5 @@ class MQ_Scheduler
     private:
     // Queue of pending Method_Requests.
     Activation_Queue *act_que_;
-    // deque <Method_Request*> active_queue_;
 };
 #endif

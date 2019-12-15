@@ -3,9 +3,6 @@
 Activation_Queue::Activation_Queue(){
     cout<<"Activation Queue Created Size:" << active_queue_.size()<<"\n";
 }
-// Activation_Queue::~Activation_Queue(){
-//     delete active_queue_;
-// }
 void Activation_Queue::enqueue (Method_Request *method){
     // cout<<"Activation queue Enqueueing\n";
     active_queue_.push_back(method);

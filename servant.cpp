@@ -1,7 +1,6 @@
 #include "servant.h"
 
 Message_Queue_Servant::Message_Queue_Servant (int size):size_(size){
-	
 	cout<<"Servant Created\n";
 }
 
