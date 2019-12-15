@@ -3,9 +3,7 @@
 #include <thread>
 #include <string>
 int main(){
-
 	Message_Queue_Proxy *mqp =  new Message_Queue_Proxy(4);
-
 	Message *message1 = new Message("Hello1!",1);
 	Message *message2 = new Message("Hello2!",2);
 	Message *message3 = new Message("Hello3!",3);
@@ -19,12 +17,6 @@ int main(){
 	Message message_result2 = (Message)result2;
 
 
-	// Message_Future result3 = mqp->get();
-
-	// mqp->put(*message3);
-
-	// Message message_result3 = (Message)result3;
-	
 	// message_result.display();
 	// while(true){}
 	// mqp->~Message_Queue_Proxy();

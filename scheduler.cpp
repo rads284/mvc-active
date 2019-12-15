@@ -18,11 +18,9 @@ void MQ_Scheduler::dispatch (void)
             // Select a Method Request ‘m’
             // whose guard evaluates to true.
             Method_Request *m = *i;
-            cout<<"m:"<<m<<"\n";
             if (m->guard ()) {
                 // Remove <m> from the queue first
                 // in case <call> throws an exception.
-                cout << "GUARD "<<m->guard() << "\n";
                 act_que_->dequeue (m);
                 m->call ();
             }
@@ -30,7 +28,7 @@ void MQ_Scheduler::dispatch (void)
     }
 }
 void MQ_Scheduler::enqueue (Method_Request *method) {
-     cout<<"Enqueing into activation queue\n"<<act_que_<<"\n";
+    //  cout<<"Enqueing into activation queue\n"<<act_que_<<"\n";
      act_que_->enqueue(method);
 }
 
