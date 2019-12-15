@@ -1,3 +1,6 @@
+#ifndef FUTURE_H
+#define FUTURE_H
+#include"message.h"
 class Message_Future
 {
     public:
@@ -7,3 +10,4 @@ class Message_Future
     // asynchronous method invocation.
     operator Message();
 };
+#endif

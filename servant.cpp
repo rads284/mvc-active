@@ -1,23 +1,22 @@
 #include "servant.h"
 
-Message_Queue_Servant (size_t size){
-	
+Message_Queue_Servant::Message_Queue_Servant (int size):size_(size){
 }
 
-Message_Queue_Servant::bool empty (void) const{
+bool Message_Queue_Servant:: empty (void) const{
 	return m_q.empty();
 }
 
-Message_Queue_Servant::bool full (void) const{
+bool Message_Queue_Servant:: full (void) const{
 	return m_q.size()==MAX_SIZE;
 }
 
-template<typename Message>
-Message_Queue_Servant::void put (const Message x){
+void Message_Queue_Servant:: put (const Message x){
 	m_q.push(x);
 }
 
-
-Message_Queue_Servant::Message get (void){
-	return m_q.pop();
+Message Message_Queue_Servant:: get (void){
+	Message temp = m_q.front();
+	m_q.pop();
+	return temp;
 }

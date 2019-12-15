@@ -1,12 +1,17 @@
 #include"scheduler.h"
 
-virtual void MQ_Scheduler::dispatch (void)
+MQ_Scheduler::MQ_Scheduler(){
+    cout<<"MQ Scheduler Created\n";
+    Activation_Queue *act_que_ = new Activation_Queue();
+}
+MQ_Scheduler::~MQ_Scheduler(){}
+void MQ_Scheduler::dispatch (void)
 {
     // Iterate continuously in a
     // separate thread.
     for (;;) {
         //i should be iterator of act_que_
-        act_que_ i;
+        aq_iter i;
         for (i = act_que_->begin();i != act_que_->end ();i++) {
             // Select a Method Request ‘m’
             // whose guard evaluates to true.
@@ -21,5 +26,9 @@ virtual void MQ_Scheduler::dispatch (void)
     }
 }
 void MQ_Scheduler::enqueue (Method_Request *method) {
-     act_que_->enqueue (method);
+     cout<<"Enqueing into activation queue\n";
+    //  act_que_->enqueue(method);
+    // deque <Method_Request*> active_queue_;
+    // active_queue_.push_back(method);
+    // cout<<"Enqueued into queue: "<<active_queue_.size()<<"\n";
 }

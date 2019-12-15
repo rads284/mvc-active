@@ -1,14 +1,17 @@
+#ifndef PROXY_H
+#define PROXY_H
 #include "method_request.h"
 #include "future.h"
 #include "servant.h"
 #include "scheduler.h"
 
+
 class Message_Queue_Proxy
 {
     public:
     // Bound the message queue size.
-    enum { MAX_SIZE = 100 };
-    Message_Queue_Proxy(size_t size = MAX_SIZE);
+    // enum { MAX_SIZE = 100 };
+    Message_Queue_Proxy(int);
     // Schedule <put> to run as an active object.
     void put (const Message m);
     // Return a Message_Future as the ‘‘future’’
@@ -26,3 +29,4 @@ class Message_Queue_Proxy
     // A scheduler for the Message Queue.
     MQ_Scheduler *scheduler_;
 };
+#endif
