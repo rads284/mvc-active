@@ -18,9 +18,9 @@ class MQ_Scheduler
     // Dispatch the Method Requests
     // on their Servant. This method
     // runs in a separate thread.
-    virtual void dispatch (void);
+    void dispatch (void);
     // void dequeue (Method_Request *method)
-    protected:
+    private:
     // Queue of pending Method_Requests.
     Activation_Queue *act_que_;
     // deque <Method_Request*> active_queue_;

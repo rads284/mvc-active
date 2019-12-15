@@ -4,14 +4,15 @@
 #include "future.h"
 #include "servant.h"
 #include "scheduler.h"
-
-
+#include<thread>
+using namespace std;
 class Message_Queue_Proxy
 {
     public:
     // Bound the message queue size.
     // enum { MAX_SIZE = 100 };
     Message_Queue_Proxy(int);
+    ~Message_Queue_Proxy();
     // Schedule <put> to run as an active object.
     void put (const Message m);
     // Return a Message_Future as the ‘‘future’’
@@ -28,5 +29,6 @@ class Message_Queue_Proxy
     Message_Queue_Servant *servant_;
     // A scheduler for the Message Queue.
     MQ_Scheduler *scheduler_;
+    thread dispatcher_;
 };
 #endif

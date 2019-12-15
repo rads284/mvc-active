@@ -10,8 +10,9 @@ class Activation_Queue
 {
     public:
     Activation_Queue();
-    ~Activation_Queue();
+    // ~Activation_Queue();
     // typedef ... iterator; 
+    // deque <Method_Request*> get_pointer();
     // Insert <method> into the queue.
     void enqueue (Method_Request *method);
     // Remove <method> into the queue.
@@ -20,6 +21,7 @@ class Activation_Queue
     aq_iter end();
     private:
     deque <Method_Request*> active_queue_;
+    // Method_Request** arr;
 };
 
 #endif

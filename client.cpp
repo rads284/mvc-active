@@ -9,7 +9,12 @@ int main(){
 	// Message *message2 = new Message("Hello2!",2);
 	// Message *message3 = new Message("Hello3!",3);
 	
-	mqp->put(*message1);
+	// mqp->put(*message1);
+	Message result = mqp->get();
+	
+	result.display();
+	// while(true){}
+	// mqp->~Message_Queue_Proxy();
 	// thread t1(mqp.put(message));	
 	// thread t2(mqp.put(message));
 	// thread t3(mqp.get(message));
