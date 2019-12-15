@@ -18,6 +18,7 @@ void MQ_Scheduler::dispatch (void)
             // Select a Method Request ‘m’
             // whose guard evaluates to true.
             Method_Request *m = *i;
+            cout<<m<<"\n";
             if (m->guard ()) {
                 // Remove <m> from the queue first
                 // in case <call> throws an exception.
