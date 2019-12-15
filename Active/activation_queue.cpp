@@ -8,12 +8,14 @@ void Activation_Queue::enqueue (Method_Request *method){
     active_queue_.push_back(method);
     cout<<"Size is: "<<active_queue_.size()<<"\n";
 }
-void Activation_Queue::dequeue (Method_Request *method){
+aq_iter Activation_Queue::dequeue (Method_Request *method){
     cout<<"Activation queue Dequeueing\n";
     aq_iter iter = find(active_queue_.begin(), active_queue_.end(), method);
+    aq_iter iter2 = active_queue_.end();
     if(iter != active_queue_.end()){
-        active_queue_.erase(iter);
+        iter2 = active_queue_.erase(iter);
     }
+    return iter2;
     // aq_iter iter = active_queue_.begin();
     // while(iter!= active_queue_.end()){
     //     // cout<<(**iter == *method)<<"DEQUE \n";

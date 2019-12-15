@@ -17,7 +17,7 @@ class Activation_Queue
     // Insert <method> into the queue.
     void enqueue (Method_Request *method);
     // Remove <method> into the queue.
-    void dequeue (Method_Request *method);
+    aq_iter dequeue (Method_Request *method);
     aq_iter begin();
     aq_iter end();
     private:

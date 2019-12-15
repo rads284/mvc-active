@@ -6,7 +6,7 @@ Message_Future::operator Message(){
 	// return fut.get();
 	cout << "\nMESSAGE OVERLOADING\n";
 	while(msg_.compare("")!=true){
-		cout<<"Busy Wait"<<"\n";
+		// cout<<"Busy Wait"<<"\n";
 	}		
 	cout << "DONE\n";
 	return msg_;

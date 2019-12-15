@@ -10,7 +10,7 @@ bool Method_Request::operator==(Method_Request const & mr)const {
 Put::Put (Message_Queue_Servant *rep, Message arg): servant_ (rep), arg_ (arg) {}
 bool Put::guard (void) const {
     // Synchronization constraint.
-    cout<<servant_<<"\n";
+    cout<<servant_<<"GUARD IN PUT \n";
     return !servant_->full ();
 }
 void Put::call (void) {
@@ -28,6 +28,8 @@ bool Put::operator==(Put const & p)const{
 Get::Get (Message_Queue_Servant *rep, Message_Future &f): servant_ (rep), result_ (f) {}
 bool Get::guard (void) const {
     // Synchronization constraint.
+    cout<<servant_<<"GUARD IN GET \n";
+
     return !servant_->empty ();
     // return true;
 }

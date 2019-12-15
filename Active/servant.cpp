@@ -8,6 +8,7 @@ Message_Queue_Servant::Message_Queue_Servant (int size):size_(size){
 // 	return mqs.
 // }
 bool Message_Queue_Servant:: empty (void) const{
+	cout << m_q.empty() << " M_Q EMPTY \n";
 	return m_q.empty();
 }
 
