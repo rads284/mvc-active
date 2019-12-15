@@ -1,6 +1,7 @@
 #ifndef ACTIVE_QUEUE_H
 #define ACTIVE_QUEUE_H
 #include<deque>
+#include<algorithm>
 #include<iostream>
 #include"method_request.h"
 using namespace std;
